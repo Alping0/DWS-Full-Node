@@ -95,6 +95,52 @@ Move the binary to the /usr/local/bin path with: sudo mv build/dewebd /usr/local
 
 Compile and install the binary in the $GOPATH path: make install
 
+# Validator Setup Guide
+
+# Step 1 - Run a fullnode / validator using the binaries
+
+cd $HOME
+
+wget https://github.com/deweb-services/deweb/releases/download/v0.3/dewebd
+
+chmod +x dewebd
+
+sudo mv dewebd /usr/local/bin/
+
+# Step 2 - Setting up the connection
+
+#Set the chain-id parameter
+
+dewebd config chain-id deweb-testnet-2
+
+#Create a wallet: You may create a wallet with one or more keys (addresses) using dewebd; you can choose a name of your own liking (we strongly advice you use one word)
+
+    dewebd keys add MyFirstAddress
+
+      name: MyFirstAddress
+      
+      type: local
+      
+      address: deweb1q6wt62l9r4zef7nj97j5xe7q553j7nsllwrmqe
+      
+      pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"ArhjQuNzZ+lSpIK9RrXK2da2PKAm7A3zpxTMHQnc/v+J"}'
+      
+      mnemonic: ""
+
+
+      **Important** write this mnemonic phrase in a safe place.
+      
+      It is the only way to recover your account if you ever forget your password.
+      
+
+      giant favorite breeze resemble kitten surprise palm way jelly version use lucky pony depart napkin favorite slender normal grace always swarm funny hen cage
+      
+#Initialize the folders: 
+
+change Moniker by your validator name (use quotes for two or more separated words "Royal Queen Seeds")
+      
+
+
 
 
 
