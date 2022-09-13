@@ -1,9 +1,12 @@
 # DWS-Full-Node
-Running a Full-Node and Validator Setup Guide
+
+# Running a Full-Node and Validator Setup Guide
+
 System Requirements
 ![image](https://user-images.githubusercontent.com/105454859/189886325-61dfca5a-81f2-4565-8af7-b54bfe15b32a.png)
 
-1. Setup your environment
+# Setup your environment
+
 # Update the system
 sudo apt update
 sudo apt upgrade
@@ -20,27 +23,29 @@ echo 'export GOBIN="$GOPATH/bin"' >> ~/.profile
 echo 'export PATH="$GOBIN:$PATH"' >> ~/.profile
 source ~/.profile
 
-Step 0A - Run a fullnode / validator using the binaries
+# Step 0A - Run a fullnode / validator using the binaries
 cd $HOME
 wget https://github.com/deweb-services/deweb/releases/download/v0.3/dewebd
 chmod +x dewebd
 sudo mv dewebd /usr/local/bin/
 
-Hardware Requirements
+# Hardware Requirements
 Here are the minimal hardware configs required for running a validator/sentry node
 
 8GB RAM
 4vCPUs
 300GB Disk space
 
-Software Requirements
+# Software Requirements
 Install deps
 sudo apt-get install build-essential jq
 
 Compile instructions: install GoLang
 
 #First remove any existing old Go installation as root
+
 sudo rm -rf /usr/local/go
+
 #Download the software:
 curl https://dl.google.com/go/go1.19.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 #Update environment variables to include go (copy everything and paste)
